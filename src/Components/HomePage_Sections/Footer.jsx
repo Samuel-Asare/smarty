@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const footerLinks = ["about", "course", "teachers", "pricing"];
 
@@ -10,7 +12,7 @@ const Footer = () => {
         <ul className="flex items-center justify-evenly space-x-6 cursor-pointer text-gray-400">
           {footerLinks.map((item) => (
             <li key={item} className="hover:text-white text-sm ">
-              {item}
+              <Link>{item}</Link>
             </li>
           ))}
         </ul>
