@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,35 +18,35 @@ const Navigation = () => {
 
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex justify-center space-x-4">
-              <a
+              <Link
                 to="/"
                 className="text-black  hover:text-[#05095D] px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 to="/about"
                 className="text-black hover:text-[#05095D]  px-3 py-2 rounded-md text-sm font-medium"
               >
                 About
-              </a>
+              </Link>
               {/* Add more as as needed */}
             </div>
           </div>
 
           <div className="flex items-center">
-            <a
+            <Link
               to="/signup"
               className="text-gray-300 bg-[#05095D] hover:text-white px-3 py-2 rounded-3xl text-sm font-medium hidden md:block"
             >
               Sign Up
-            </a>
-            <a
+            </Link>
+            <Link
               to="/signin"
               className="text-[#05095D] px-3 py-2 rounded-md text-sm font-medium hidden md:block"
             >
               Sign In
-            </a>
+            </Link>
 
             <button
               onClick={toggleMenu}
